@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sowmiya Ravi — Data Engineer</title>
-<meta name="description" content="Sowmiya Ravi — Data Engineer building production pipelines and dashboards for district government, Tamil Nadu.">
+<meta name="description" content="Sowmiya Ravi — Data Engineer building production pipelines and analytics for district government, Tamil Nadu.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300..700;1,400..600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -32,9 +32,9 @@
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <span class="eyebrow">RECORD 001 · <span class="amber">DISTRICT MONITORING UNIT, GOVT OF TAMIL NADU</span></span>
-        <h1>I turn field data into decisions a <em>District Collector</em> reads every morning.</h1>
-        <p class="hero-sub">Data Engineer building the pipelines and dashboards behind Kancheepuram's district administration — from 120+ school registers to 7,500+ road accident records, live in production, used for real decisions.</p>
+        <span class="eyebrow"><span class="amber">DISTRICT MONITORING UNIT, GOVT OF TAMIL NADU</span></span>
+        <h1>I build the Data Infrastructure a district government trusts to make decisions.</h1>
+        <p class="hero-sub">Data Engineer building the pipelines and analytics behind Kancheepuram's district administration — from a 120+ school data pipeline to road accident analytics and scheme sampling studies, used for real decisions.</p>
         <div class="hero-actions">
           <a href="projects.html" class="btn btn-primary">View the pipelines →</a>
           <a href="contact.html" class="btn btn-ghost">Get in touch</a>
@@ -42,12 +42,12 @@
       </div>
 
       <div class="trace reveal">
-        <span class="trace-title">Live trace — school performance pipeline</span>
+        <span class="trace-title">Live trace — student performance monitoring pipeline</span>
         <div class="trace-path">
-          <div class="trace-step"><span class="t-name">Google Sheets · 120+ schools</span><span class="t-meta">raw field entries, district-wide</span></div>
-          <div class="trace-step"><span class="t-name">Python · extract &amp; validate</span><span class="t-meta">row hashing for change detection</span></div>
-          <div class="trace-step"><span class="t-name">BigQuery · star schema</span><span class="t-meta">MERGE upserts, retry/backoff</span></div>
-          <div class="trace-step"><span class="t-name">Power BI · district dashboard</span><span class="t-meta">read by the District Collector &amp; CEO</span></div>
+          <div class="trace-step"><span class="t-name">EMIS Portal · Selenium</span><span class="t-meta">scrapes student master records, seeds 120 school tabs</span></div>
+          <div class="trace-step"><span class="t-name">Google Workspace APIs · Python</span><span class="t-meta">HM-filled marks, MD5 row hashing for change detection</span></div>
+          <div class="trace-step"><span class="t-name">BigQuery · Bronze → Silver → Gold</span><span class="t-meta">quarantine logic, MERGE-based upserts</span></div>
+          <div class="trace-step"><span class="t-name">Power BI · district dashboard</span><span class="t-meta">17 analytics tables, read by district leadership</span></div>
         </div>
       </div>
     </div>
@@ -61,16 +61,16 @@
         <div class="label">Schools in production pipeline</div>
       </div>
       <div class="stat">
-        <div class="num">7,500<span class="unit">+</span></div>
-        <div class="label">Accident records geocoded</div>
+        <div class="num">7 Years</div>
+        <div class="label">Accident records analyzed</div>
       </div>
       <div class="stat">
-        <div class="num">2</div>
-        <div class="label">Pipelines in daily government use</div>
+        <div class="num num-compare">89.71% → 93.40%</div>
+        <div class="label">12th standard pass %, govt schools</div>
       </div>
       <div class="stat">
-        <div class="num">1</div>
-        <div class="label">Sole data professional on the team</div>
+        <div class="num num-compare">31 → 18</div>
+        <div class="label">State rank, govt school pass %</div>
       </div>
     </div>
   </section>
@@ -85,7 +85,7 @@
         </div>
       </div>
       <p style="max-width:64ch;color:var(--ink-soft);font-size:15.5px;margin-bottom:24px;">
-        Two years building and owning production data systems solo — Google Sheets APIs, Python ETL, BigQuery warehousing, and Power BI — for a district government team. Now looking to bring that same ownership to a larger engineering org.
+        Over a year building and owning production data systems solo for a district government. Now looking to bring that same ownership to a larger engineering org.
       </p>
       <div class="chip-list" style="border-color:var(--line)">
         <span class="chip" style="border-color:var(--line);color:var(--ink-soft)">Tredence</span>
@@ -102,7 +102,7 @@
       <div class="section-head">
         <div>
           <span class="eyebrow">Selected work</span>
-          <h2>Two pipelines, both still running.</h2>
+          <h2>The systems behind district-level decisions.</h2>
         </div>
         <a href="projects.html" class="section-link">All projects →</a>
       </div>
@@ -111,20 +111,32 @@
         <a class="record" href="projects.html#school-pipeline" style="display:grid;text-decoration:none;">
           <div class="rec-id">ID<span class="n">01</span></div>
           <div>
-            <h3>School Performance Analytics Pipeline</h3>
-            <p class="desc">Google Sheets API → Python → BigQuery star schema → Power BI. Tracks academic performance across 120+ schools district-wide; adopted by the District Collector and CEO for decision-making.</p>
+            <h3>Student Performance Monitoring Pipeline</h3>
+            <p class="desc">EMIS scraper → Google Workspace APIs → BigQuery medallion architecture → Power BI. Automated academic monitoring across 120+ schools, replacing manual Excel-based reporting district-wide.</p>
             <div class="tag-row">
-              <span class="tag">Python</span><span class="tag">BigQuery</span><span class="tag">Power BI</span><span class="tag">MERGE upserts</span>
+              <span class="tag">Python</span><span class="tag">BigQuery</span><span class="tag">Power BI</span><span class="tag">Medallion Architecture</span>
             </div>
           </div>
           <div class="rec-status"><span class="badge live"><span class="dot"></span>Live</span></div>
         </a>
 
-        <a class="record" href="projects.html#accident-pipeline" style="display:grid;text-decoration:none;">
+        <a class="record" href="projects.html#performance-analysis" style="display:grid;text-decoration:none;">
           <div class="rec-id">ID<span class="n">02</span></div>
           <div>
+            <h3>District School Performance Analysis</h3>
+            <p class="desc">Cohort transition analysis and root-cause targeting across every govt school student, district-wide — findings acted on by the Chief Educational Officer.</p>
+            <div class="tag-row">
+              <span class="tag">Cohort Analysis</span><span class="tag">Statistical Segmentation</span><span class="tag">Root-Cause Analysis</span>
+            </div>
+          </div>
+          <div class="rec-status"><span class="badge done"><span class="dot"></span>Delivered</span></div>
+        </a>
+
+        <a class="record" href="projects.html#accident-pipeline" style="display:grid;text-decoration:none;">
+          <div class="rec-id">ID<span class="n">03</span></div>
+          <div>
             <h3>Road Accident Intelligence Pipeline</h3>
-            <p class="desc">Geocoded 7,500+ accident records into hotspot clusters and fatality-rate analysis. Dashboards adopted by district administration for road safety planning.</p>
+            <p class="desc">Hotspot clustering and fatality-rate analysis across 7 years of accident data. Dashboards adopted by district administration for road safety planning.</p>
             <div class="tag-row">
               <span class="tag">Python</span><span class="tag">Geocoding</span><span class="tag">Power BI</span><span class="tag">Clustering</span>
             </div>
@@ -140,10 +152,10 @@
     <div class="wrap" style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:48px;align-items:center;">
       <div>
         <span class="eyebrow">Recognition</span>
-        <h2 style="margin-top:10px;font-size:clamp(22px,2.6vw,30px);">Certificate of Appreciation from the District Collector (IAS) for analytics work that changed how the district reads its own data.</h2>
+        <h2 style="margin-top:10px;font-size:clamp(22px,2.6vw,30px);">Certificate of Appreciation from the District Collector (IAS) for building the district's core analytics systems.</h2>
       </div>
       <div>
-        <p style="margin-bottom:20px;">MSc Statistics, Madras Christian College. Data Science &amp; AI certification, Boston Institute of Analytics. Hands-on with PySpark, Databricks, Azure and AWS alongside daily BigQuery work.</p>
+        <p style="margin-bottom:20px;">MSc Statistics, Madras Christian College. Production stack spans Python, SQL, BigQuery on GCP, and Power BI.</p>
         <a href="about.html" class="btn btn-ghost on-dark">More about me →</a>
       </div>
     </div>
@@ -155,9 +167,9 @@
   <div class="wrap footer-inner">
     <span>© 2026 Sowmiya Ravi · Kancheepuram, Tamil Nadu</span>
     <div class="footer-links">
-      <a href="mailto:sowmiya.ravi@example.com">Email</a>
-      <a href="#">LinkedIn</a>
-      <a href="#">GitHub</a>
+      <a href="mailto:sowmiyar1022@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/sowmiyarvm/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/sowmiya-2210" target="_blank" rel="noopener">GitHub</a>
       <a href="contact.html">Contact</a>
     </div>
   </div>
