@@ -70,7 +70,7 @@
             <li>Selenium scraper pulls student records from the EMIS government portal, the source data that seeds all 120 school tabs.</li>
             <li>Python extracts HM-filled marks via Google Workspace APIs (Sheets, Drive, Gmail) into a Bronze layer, using MD5 row hashing to detect only real changes.</li>
             <li>SQL validation layer (Silver) quarantines invalid records with structured reject codes, instead of failing the whole load.</li>
-            <li>Star schema Gold layer (1M+ rows) maintained via MERGE-based upserts, with no full reloads.</li>
+            <li>Star schema Gold layer (100k+ rows) maintained via MERGE-based upserts, with no full reloads.</li>
             <li>17 pre-computed analytics tables: district KPIs, block ranking, school performance categories (Good / Satisfactory / NI / Poor), subject failure combinations, attendance–pass correlation, and student risk flagging.</li>
             <li>Automated HM notifications via Gmail API: each school receives a personalised email with a direct link to their own protected tab.</li>
             <li>Orchestrated via GitHub Actions on a weekly schedule, with exponential backoff for API rate limits.</li>
@@ -81,7 +81,7 @@
           <p>Replaced manual Excel-based reporting across 120 schools with an automated, analytics-ready system, giving district leadership a live, queryable view of students for the first time, turning a reporting lag of weeks into an on-demand view.</p>
           <div class="impact-row">
             <div class="imp"><span class="num">120</span><span class="lab">Schools automated</span></div>
-            <div class="imp"><span class="num">1M+</span><span class="lab">Records in Gold layer</span></div>
+            <div class="imp"><span class="num">100k+</span><span class="lab">Records in Gold layer</span></div>
             <div class="imp"><span class="num">17</span><span class="lab">Analytics tables</span></div>
           </div>
         </div>
