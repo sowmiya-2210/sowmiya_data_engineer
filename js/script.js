@@ -37,17 +37,23 @@ steps.forEach((el, i) => {
   setTimeout(() => el.classList.add('on'), 350 + i * 260);
 });
 const countEls = document.querySelectorAll('.num[data-count]');
-countEls.forEach(el => {
-  const target = parseFloat(el.getAttribute('data-count'));
-  const suffix = el.getAttribute('data-suffix') || '';
-  const duration = 1200;
-  const start = performance.now();
-  function tick(now) {
-    const progress = Math.min((now - start) / duration, 1);
-    const eased = 1 - Math.pow(1 - progress, 3);
-    const value = Math.round(target * eased);
-    el.textContent = value + suffix;
-    if (progress < 1) requestAnimationFrame(tick);
-  }
-  requestAnimationFrame(tick);
-});
+const countIO = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const el = entry.target;
+    const target = parseFloat(el.getAttribute('data-count'));
+    const suffix = el.getAttribute('data-suffix') || '';
+    const duration = 1200;
+    const start = performance.now();
+    function tick(now) {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const value = Math.round(target * eased);
+      el.textContent = value + suffix;
+      if (progress < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+    countIO.unobserve(el);
+  });
+}, { threshold: 0.4 });
+countEls.forEach(el => countIO.observe(el));
