@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sowmiya Ravi — Data Engineer</title>
+<meta name="description" content="Sowmiya Ravi — Data Engineer building production pipelines and dashboards for district government, Tamil Nadu.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300..700;1,400..600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="index.html" class="logo">SR <span class="logo-dot">·</span> <span class="logo-sub">DATA ENGINEERING</span></a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="status-pill"><span class="dot"></span>Open to opportunities</div>
+    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">RECORD 001 · <span class="amber">DISTRICT MONITORING UNIT, GOVT OF TAMIL NADU</span></span>
+        <h1>I turn field data into decisions a <em>District Collector</em> reads every morning.</h1>
+        <p class="hero-sub">Data Engineer building the pipelines and dashboards behind Kancheepuram's district administration — from 120+ school registers to 7,500+ road accident records, live in production, used for real decisions.</p>
+        <div class="hero-actions">
+          <a href="projects.html" class="btn btn-primary">View the pipelines →</a>
+          <a href="contact.html" class="btn btn-ghost">Get in touch</a>
+        </div>
+      </div>
+
+      <div class="trace reveal">
+        <span class="trace-title">Live trace — school performance pipeline</span>
+        <div class="trace-path">
+          <div class="trace-step"><span class="t-name">Google Sheets · 120+ schools</span><span class="t-meta">raw field entries, district-wide</span></div>
+          <div class="trace-step"><span class="t-name">Python · extract &amp; validate</span><span class="t-meta">row hashing for change detection</span></div>
+          <div class="trace-step"><span class="t-name">BigQuery · star schema</span><span class="t-meta">MERGE upserts, retry/backoff</span></div>
+          <div class="trace-step"><span class="t-name">Power BI · district dashboard</span><span class="t-meta">read by the District Collector &amp; CEO</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats reveal">
+    <div class="wrap stats-grid">
+      <div class="stat">
+        <div class="num">120<span class="unit">+</span></div>
+        <div class="label">Schools in production pipeline</div>
+      </div>
+      <div class="stat">
+        <div class="num">7,500<span class="unit">+</span></div>
+        <div class="label">Accident records geocoded</div>
+      </div>
+      <div class="stat">
+        <div class="num">2</div>
+        <div class="label">Pipelines in daily government use</div>
+      </div>
+      <div class="stat">
+        <div class="num">1</div>
+        <div class="label">Sole data professional on the team</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CURRENTLY -->
+  <section class="reveal">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Currently</span>
+          <h2>Looking for a Data Engineer / Analytics Engineer seat<br>at a product company or GCC.</h2>
+        </div>
+      </div>
+      <p style="max-width:64ch;color:var(--ink-soft);font-size:15.5px;margin-bottom:24px;">
+        Two years building and owning production data systems solo — Google Sheets APIs, Python ETL, BigQuery warehousing, and Power BI — for a district government team. Now looking to bring that same ownership to a larger engineering org.
+      </p>
+      <div class="chip-list" style="border-color:var(--line)">
+        <span class="chip" style="border-color:var(--line);color:var(--ink-soft)">Tredence</span>
+        <span class="chip" style="border-color:var(--line);color:var(--ink-soft)">Ecolab</span>
+        <span class="chip" style="border-color:var(--line);color:var(--ink-soft)">Deloitte USI</span>
+        <span class="chip" style="border-color:var(--line);color:var(--ink-soft)">+ GCCs &amp; product companies</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PROJECTS -->
+  <section class="reveal">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Selected work</span>
+          <h2>Two pipelines, both still running.</h2>
+        </div>
+        <a href="projects.html" class="section-link">All projects →</a>
+      </div>
+
+      <div class="records">
+        <a class="record" href="projects.html#school-pipeline" style="display:grid;text-decoration:none;">
+          <div class="rec-id">ID<span class="n">01</span></div>
+          <div>
+            <h3>School Performance Analytics Pipeline</h3>
+            <p class="desc">Google Sheets API → Python → BigQuery star schema → Power BI. Tracks academic performance across 120+ schools district-wide; adopted by the District Collector and CEO for decision-making.</p>
+            <div class="tag-row">
+              <span class="tag">Python</span><span class="tag">BigQuery</span><span class="tag">Power BI</span><span class="tag">MERGE upserts</span>
+            </div>
+          </div>
+          <div class="rec-status"><span class="badge live"><span class="dot"></span>Live</span></div>
+        </a>
+
+        <a class="record" href="projects.html#accident-pipeline" style="display:grid;text-decoration:none;">
+          <div class="rec-id">ID<span class="n">02</span></div>
+          <div>
+            <h3>Road Accident Intelligence Pipeline</h3>
+            <p class="desc">Geocoded 7,500+ accident records into hotspot clusters and fatality-rate analysis. Dashboards adopted by district administration for road safety planning.</p>
+            <div class="tag-row">
+              <span class="tag">Python</span><span class="tag">Geocoding</span><span class="tag">Power BI</span><span class="tag">Clustering</span>
+            </div>
+          </div>
+          <div class="rec-status"><span class="badge live"><span class="dot"></span>Live</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DARK BAND -->
+  <section class="band-dark reveal">
+    <div class="wrap" style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:48px;align-items:center;">
+      <div>
+        <span class="eyebrow">Recognition</span>
+        <h2 style="margin-top:10px;font-size:clamp(22px,2.6vw,30px);">Certificate of Appreciation from the District Collector (IAS) for analytics work that changed how the district reads its own data.</h2>
+      </div>
+      <div>
+        <p style="margin-bottom:20px;">MSc Statistics, Madras Christian College. Data Science &amp; AI certification, Boston Institute of Analytics. Hands-on with PySpark, Databricks, Azure and AWS alongside daily BigQuery work.</p>
+        <a href="about.html" class="btn btn-ghost on-dark">More about me →</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>© 2026 Sowmiya Ravi · Kancheepuram, Tamil Nadu</span>
+    <div class="footer-links">
+      <a href="mailto:sowmiya.ravi@example.com">Email</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

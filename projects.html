@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Sowmiya Ravi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300..700;1,400..600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .case{ padding: 60px 0; border-top: 1px solid var(--line); }
+  .case:first-of-type{ border-top:none; }
+  .case-head{ display:grid; grid-template-columns: 100px 1fr; gap: 26px; margin-bottom: 34px; }
+  .case-body{ display:grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  .case-block h4{ font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--slate); margin-bottom: 12px; }
+  .case-block p{ color: var(--ink-soft); font-size: 14.5px; margin-bottom: 10px; }
+  .case-block ul{ margin: 0; padding-left: 18px; color: var(--ink-soft); font-size: 14.5px; }
+  .case-block li{ margin-bottom: 8px; }
+  .impact-row{ display:flex; gap: 28px; margin-top: 18px; flex-wrap: wrap; }
+  .impact-row .imp{ font-family: var(--mono); }
+  .impact-row .imp .num{ font-family: var(--display); font-size: 24px; color: var(--ink); display:block; }
+  .impact-row .imp .lab{ font-size: 11px; color: var(--slate); text-transform: uppercase; letter-spacing: 0.05em; }
+  @media (max-width: 780px){ .case-body{ grid-template-columns: 1fr; } .case-head{ grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="index.html" class="logo">SR <span class="logo-dot">·</span> <span class="logo-sub">DATA ENGINEERING</span></a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="status-pill"><span class="dot"></span>Open to opportunities</div>
+    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+  </div>
+</header>
+
+<main>
+  <section style="padding-bottom:0;">
+    <div class="wrap">
+      <span class="eyebrow">Projects</span>
+      <h1 style="font-size:clamp(30px,4vw,44px);margin-top:10px;max-width:20ch;">Two production pipelines, built and owned solo.</h1>
+    </div>
+  </section>
+
+  <!-- PROJECT 01 -->
+  <section class="case reveal" id="school-pipeline">
+    <div class="wrap">
+      <div class="case-head">
+        <div class="rec-id"><span class="eyebrow">ID</span><span class="n" style="font-family:var(--display);font-size:26px;color:var(--ink);display:block;">01</span></div>
+        <div>
+          <span class="badge live" style="margin-bottom:10px;"><span class="dot"></span>Live · Production</span>
+          <h2 style="font-size:clamp(22px,2.6vw,30px);margin-top:10px;">School Performance Analytics Pipeline</h2>
+          <div class="tag-row" style="margin-top:12px;">
+            <span class="tag">Python</span><span class="tag">Google Sheets API</span><span class="tag">BigQuery</span><span class="tag">Power BI</span><span class="tag">Star schema</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-body">
+        <div class="case-block">
+          <h4>Problem</h4>
+          <p>Academic performance data for 120+ schools across the district lived in scattered Google Sheets, updated inconsistently, with no single source of truth the District Collector or CEO could trust for decisions.</p>
+          <h4 style="margin-top:26px;">Architecture</h4>
+          <ul>
+            <li>Google Sheets API pulls raw entries from every school's register on a schedule.</li>
+            <li>Python extraction layer validates and hashes each row to detect real changes only.</li>
+            <li>BigQuery star schema with MERGE-based upsert logic keeps the warehouse current without full reloads.</li>
+            <li>Retry/backoff handling for API and load failures, so the pipeline recovers without manual intervention.</li>
+            <li>Power BI dashboard surfaces performance trends for district leadership.</li>
+          </ul>
+        </div>
+        <div class="case-block">
+          <h4>Impact</h4>
+          <p>Adopted by the District Collector and CEO as a standing reference for school performance across Kancheepuram — the first time this data has existed in one governed, queryable place.</p>
+          <div class="impact-row">
+            <div class="imp"><span class="num">120+</span><span class="lab">Schools tracked</span></div>
+            <div class="imp"><span class="num">v3</span><span class="lab">Pipeline iteration in production</span></div>
+            <div class="imp"><span class="num">Solo</span><span class="lab">Designed, built &amp; maintained</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT 02 -->
+  <section class="case reveal" id="accident-pipeline">
+    <div class="wrap">
+      <div class="case-head">
+        <div class="rec-id"><span class="eyebrow">ID</span><span class="n" style="font-family:var(--display);font-size:26px;color:var(--ink);display:block;">02</span></div>
+        <div>
+          <span class="badge live" style="margin-bottom:10px;"><span class="dot"></span>Live · Production</span>
+          <h2 style="font-size:clamp(22px,2.6vw,30px);margin-top:10px;">Road Accident Intelligence Pipeline</h2>
+          <div class="tag-row" style="margin-top:12px;">
+            <span class="tag">Python</span><span class="tag">Geocoding</span><span class="tag">Hotspot clustering</span><span class="tag">Power BI</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-body">
+        <div class="case-block">
+          <h4>Problem</h4>
+          <p>Road accident records existed as raw case entries with no spatial or trend view — no way to see where accidents cluster, or which stretches carry the highest fatality risk.</p>
+          <h4 style="margin-top:26px;">Architecture</h4>
+          <ul>
+            <li>Geocoded 7,500+ accident records to map every case to a precise location.</li>
+            <li>Built hotspot clustering to surface high-frequency accident zones across the district.</li>
+            <li>Layered in fatality-rate analysis to separate high-volume spots from high-severity ones.</li>
+            <li>Power BI dashboard delivered to district administration for road safety planning.</li>
+          </ul>
+        </div>
+        <div class="case-block">
+          <h4>Impact</h4>
+          <p>Dashboards were adopted directly by the district administration and are used in road safety planning decisions — turning raw case files into a spatial intelligence tool.</p>
+          <div class="impact-row">
+            <div class="imp"><span class="num">7,500+</span><span class="lab">Records geocoded</span></div>
+            <div class="imp"><span class="num">1</span><span class="lab">District-wide dashboard</span></div>
+            <div class="imp"><span class="num">Solo</span><span class="lab">End-to-end build</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDATIONAL -->
+  <section class="reveal" style="border-top:1px solid var(--line);">
+    <div class="wrap">
+      <span class="eyebrow">Also built</span>
+      <div class="records" style="margin-top:20px;">
+        <div class="record" style="grid-template-columns:100px 1fr;">
+          <div class="rec-id">ID<span class="n">03</span></div>
+          <div>
+            <h3>EMIS Student Master Data Scraper</h3>
+            <p class="desc">Selenium-based scraper that pulls student master data from the state's EMIS portal — the foundational data source feeding downstream district analytics.</p>
+            <div class="tag-row"><span class="tag">Python</span><span class="tag">Selenium</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>© 2026 Sowmiya Ravi · Kancheepuram, Tamil Nadu</span>
+    <div class="footer-links">
+      <a href="mailto:sowmiya.ravi@example.com">Email</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
