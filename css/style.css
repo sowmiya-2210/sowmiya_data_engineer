@@ -62,6 +62,7 @@ p{ margin: 0; }
   color: var(--slate);
 }
 .eyebrow .amber{ color: var(--amber); }
+.hero-greeting{ font-family: var(--body); font-size: 15px; color: var(--ink-soft); margin-bottom: 10px; font-weight: 500; }
 
 /* ---------- HEADER ---------- */
 .site-header{
